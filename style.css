@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+/*Code*/
+#back{
+    height: 100vh;
+    background: url('img/br.jpg') center center;
+    background-size: cover;
+}
+#back section{
+    height: 100%;
+    width: 50%;
+    background-image: linear-gradient(90deg, #fab237, #00000000);
+    padding: 10px 20px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation: apar 5s;
+}
+h1{
+    font-size: 65px;
+    font-family: 'Libre Baskerville', serif;
+    color: #492605;
+}
+h2{
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    color: #49260585;
+}
+#back section #link ul li{
+    margin: 10px 0px;
+    padding:10px;
+    border: solid 2px #352414;
+    border-radius: 10px;
+    width: 50%;
+    transition: background-color 0.5s
+}
+#back section #link ul li a{
+    font-size: 25px;
+    color: #492605;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#back section #link ul li:hover{
+    background-color: #fc881c;
+}
+
+/*Animation*/
+@keyframes apar {
+    0%{
+        filter:blur(20px) opacity(0.4);
+        transform: translatex(-100px);
+    }
+}
