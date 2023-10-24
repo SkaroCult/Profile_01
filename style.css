@@ -57,10 +57,48 @@ h2{
     background-color: #fc881c;
 }
 
+
+/*Responsivo*/
+@media (max-width: 780px){
+    #back section #link ul li a{
+        font-size: 15px;
+    }
+}
+@media (max-width: 450px){
+    #back{
+        background: url("img/870886.jpg") center center no-repeat;
+        background-size: cover;
+    }
+    #back section{
+        width: 100%;
+        background-color: #fc881c67;
+        animation: apaRep 5s;
+        align-items: center;
+    }
+    #back section #titu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #back section #link ul li{
+        width: 100%;
+
+    }
+    #back section #link ul li a *{
+        margin: 0px 10px;
+    }
+    
+}
+
 /*Animation*/
 @keyframes apar {
     0%{
         filter:blur(20px) opacity(0.4);
         transform: translatex(-100px);
+    }
+}
+@keyframes apaRep{
+    0%{
+        filter: blur(20px) opacity(0.4);
     }
 }
