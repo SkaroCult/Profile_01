@@ -12,16 +12,52 @@
     overflow: hidden;
 }
 
+/*Variaveis*/
+.sand-mode:root{
+    --background-img: url('img/br.jpg') center center no-repeat;
+    --background-mobile: url('img/brc.jpg') center center no-repeat;
+    --background-color:#fc881c67;
+    --grad-color: #fab237;
+    --h1-color:#492605;
+    --h2-color:#49260585;
+    --border-color:#352414;
+    --li-hover-color:#fc881c;
+    --a-color:#492605;
+}
+.cyber-mode:root{
+    --background-img: url('img/joe.jpg') center center no-repeat;
+    --background-mobile: url('img/joe.jpg') -800px center no-repeat;
+    --background-color:#fa37fa54;
+    --grad-color: #fa37fa;
+    --h1-color:#320547;
+    --h2-color:#1f033585;
+    --border-color:#6f009b;
+    --li-hover-color:#c60ffd7a;
+    --a-color:#300549;
+}
+.snow-mode:root{
+    --background-img: url('img/snow.jpg') center center no-repeat;
+    --background-mobile: url('img/snow.jpg') center center no-repeat;
+    --background-color:#c3d6ff6c;
+    --grad-color: #c3d6ff;
+    --h1-color:#535353;
+    --h2-color:#20202085;
+    --border-color:#5a5a5a;
+    --li-hover-color:#a1a1a17a;
+    --a-color:#4e4e4e;
+}
+
 /*Code*/
 #back{
     height: 100vh;
-    background: url('img/br.jpg') center center;
+    background: var(--background-img);
     background-size: cover;
+
 }
 #back section{
     height: 100%;
     width: 50%;
-    background-image: linear-gradient(90deg, #fab237, #00000000);
+    background-image: linear-gradient(90deg, var(--grad-color), #00000000);
     padding: 10px 20px 0px 40px;
     display: flex;
     flex-direction: column;
@@ -31,30 +67,34 @@
 h1{
     font-size: 65px;
     font-family: 'Libre Baskerville', serif;
-    color: #492605;
+    color: var(--h1-color);
 }
 h2{
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
-    color: #49260585;
+    color: var(--h2-color);
 }
 #back section #link ul li{
     margin: 10px 0px;
     padding:10px;
-    border: solid 2px #352414;
+    border: solid 2px var(--border-color);
     border-radius: 10px;
     width: 50%;
-    transition: background-color 0.5s
+    transition: background-color 0.5s;
+    &:hover{
+        background-color: var(--li-hover-color);
+    }
 }
 #back section #link ul li a{
     font-size: 25px;
-    color: #492605;
+    color: var(--a-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
-#back section #link ul li:hover{
-    background-color: #fc881c;
+#back section #link ul li a h3{
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -66,12 +106,12 @@ h2{
 }
 @media (max-width: 450px){
     #back{
-        background: url("img/870886.jpg") center center no-repeat;
+        background: var(--background-mobile);
         background-size: cover;
     }
     #back section{
         width: 100%;
-        background-color: #fc881c67;
+        background-color: var(--background-color);
         animation: apaRep 5s;
         align-items: center;
     }
