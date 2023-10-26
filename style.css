@@ -37,14 +37,14 @@
 }
 .snow-mode:root{
     --background-img: url('img/snow.jpg') center center no-repeat;
-    --background-mobile: url('img/snow.jpg') center center no-repeat;
+    --background-mobile: url('img/snowM.jpg') center center no-repeat;
     --background-color:#c3d6ff6c;
-    --grad-color: #c3d6ff;
-    --h1-color:#535353;
-    --h2-color:#20202085;
-    --border-color:#5a5a5a;
-    --li-hover-color:#a1a1a17a;
-    --a-color:#4e4e4e;
+    --grad-color: #80d3fa;
+    --h1-color:#1b9696;
+    --h2-color:#014c5285;
+    --border-color:#048c91;
+    --li-hover-color:#4bd8e27a;
+    --a-color:#016b6b;
 }
 
 /*Code*/
